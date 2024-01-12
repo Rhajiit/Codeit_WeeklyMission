@@ -1,3 +1,5 @@
+/* 공통요소 */
+
 * {
    box-sizing: border-box;
 }
@@ -40,24 +42,6 @@ body {
    margin: 0;
 }
 
-header div.landingPage > img {
-   max-width: 1118px;
-}
-
-nav.landingPage {
-   background-color: var(--Linkbrary-bg);
-   position: sticky;
-   margin: 0;
-   top: 0;
-}
-
-nav.landingPage > div.landingPage {
-   display: flex;
-   padding: 20px 200px;
-   align-items: center;
-   justify-content: space-between;
-}
-
 .button {
    display: flex;
    color: var(--LBrary-GrayLight);
@@ -72,329 +56,397 @@ nav.landingPage > div.landingPage {
    line-height: 100%;
 }
 
+/* 랜딩 페이지 */
 
-header .landingPage {
-   display: flex;
-   flex-direction: column;
-   background-color: var(--Linkbrary-bg);
-   width: 100%;
-   max-width: 1200px;
-   justify-content: flex-end;
-   align-items: center;
-   margin: 0 auto;  
-   padding: 70px 0 0;
-   gap: 40px;
-   font-size: 4rem;
-   text-align: center;
-   font-weight: 700;
-   line-height: 125%;
-}
+   /* 랜딩페이지 텍스트 그라데이션 */
+   .purplePinkGradation {
+      background: linear-gradient(91deg, #6D6AFE 17.28%, #FF9F9F 74.98%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   } /*세상의 모든 정보*/
 
-header.landingPage > img {
-   width: 100%;   
-}
+   .redBlueGradation {
+      background: linear-gradient(96deg, #FE8A8A 1.72%, #A4CEFF 74.97%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   } /*원하는 링크*/
 
-.purplePinkGradation {
-   background: linear-gradient(91deg, #6D6AFE 17.28%, #FF9F9F 74.98%);
-   background-clip: text;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
-
-nav.landingPage > div.landingPage > a.button {
-   width: 128px;
-}
-
-.landingPage > a.button {
-      width: 350px;
-}
-
-article.landingPage {
-   background-color: var(--LBrary-White);
-   grid-template-columns: 1fr 1fr;
-   display: grid;
-   padding: 50px 0;
-   width: 100%;
-   max-width: 981px;
-   margin: 0 auto;
-   align-items: center;
-   column-gap: 157px;
-   row-gap: 10px;
-}
-
-article.landingPage > p {
-   margin: 0;
-}
-
-article.landingPage .textSpace {
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
-}
-
-article.landingPage > img {
-   grid-row: 1 / 3;
-   width: 550px;
-   height: 450px;
-}
-
-article p.title {
-   font-size: 3rem;
-   font-weight: 700;
-   letter-spacing: -0.3px;
-   grid-row: 1;
-   margin: auto;
-   margin-bottom: 0;
-   margin-left: 0;
-}
-
-article p.description {
-   font-size: 1rem;
-   font-weight: 400;
-   line-height: 24px;
-   margin: auto;
-   margin-top: 0;
-   margin-left: 0;
-}
-
-footer {
-   display: flex;
-   justify-content: space-between;
-   background-color: var(--LBrary-Black);
-   width: 100%;
-   margin: 0;
-   padding: 32px 104px 64px;
-}
-
-.corperateInformation {
-   color: #676767;
-   text-align: left;
-   font-family: acme;
-   font-size: 1rem;
-   font-weight: 400;
-}
-
-.footerPravay{
-   display: flex;
-   gap: 30px;
-   color: #CFCFCF;
-   font-family: acme;
-   font-size: 1rem;
-   font-weight: 400;
-}
-
-.footerSocial {
-   display: flex;
-   gap: 12px;
-   align-items: center;
-   justify-content: end;
-}
-
-.SignPage {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin: 238px auto auto;
-   width: 400px;
-}
-
-.SignForm {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   gap: 30px;
-}
-
-.SignForm > header {
-   flex-direction: column;
-   width: auto;
-   text-align: center;
-   color: var(--LBrary-Black);
-   font-size: 1rem;
-   font-weight: 400;
-   line-height: 150%;
-}
-
-.InputSection {
-   display: flex;
-   flex-direction: column;
-   gap: 12px;
-}
-
-.SignInput  {
-   display: flex;
-   padding: 18px 15px;
-   width: 100%;
-   gap: 6px;
-   border-radius: 8px;
-   border: 1px solid var(--LBrary-Gray20);
-   background: var(--LBrary-White);
-   position: relative;
-}
-
-.inputDiv {
-   display: flex;
-   position: relative;
-   justify-content: space-between;
-   width: 100%;
-}
-
-.SignInput:focus{ 
-   outline-color: var(--LBrary-Primary-color);
-}
-
-.passwordSeenButton {
-   position: absolute;
-   top: 50%;
-   right: 15px;
-   transform: translate(0, -50%);
-}
-
-
-.signInputBeHidden {
-   position: absolute;
-   margin-right: 15px;
-}
-
-.WrongPass {
-   color: var(--LBrary-Red);
-   font-size: 0.875rem;
-   font-weight: 400;
-}
-
-.SignLabel {
-   color: var(--LBrary-black);
-   font-size: 0.875rem;
-   font-weight: 400;
-}
-
-.SocialSign {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   border-radius: 8px;
-   border: 1px solid var(--LBrary-Gray20);
-   background-color: var(--LBrary-Gray10);
-   width: 100%;
-   margin: 32px;
-   padding: 12px 24px;
-   font-size: 0.875rem;
-   color: var(--LBrary-Gray50);
-}
-
-.icons {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 16px;
-}
-
-.icon {
-   display: flex;
-   position: relative;
-   height: 42px;
-   width: 42px;  
-}
-
-.SignForm > .button {
-   width: 100%;
-   margin: auto;
-}
-
-
-@media (max-width: 1199px) {
-   nav.landingPage > div.landingPage {
-      width: 100%;
-      padding: 20px 32px;
-      max-width: 864px;
-      margin: 0 auto;
-   }
+   .orangeBlueGradation {
+      background: linear-gradient(277deg, #6FBAFF 59.22%, #FFD88B 93.66%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   } /*관리*/
    
-   header .landingPage {
-      max-width: 698px;
+   .blueWhiteGradation {
+      background: linear-gradient(99deg, #6D7CCD 19.76%, rgba(82, 136, 133, 0.22) 52.69%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   } /*공유*/
+
+   .bluePnikGradation {
+      background: linear-gradient(271deg, #FE578F -9.84%, #68E8F9 107.18%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   } /*검색*/
+   
+   /*랜딩 페이지 색상 팔레트 끝*/
+
+   nav.landingPage {
+      background-color: var(--Linkbrary-bg);
+      position: sticky;
+      margin: 0;
+      top: 0;
    }
 
-   article.landingPage {
-      max-width: 698px;
-      row-gap: 10px;
-      column-gap: 51px;
-   }
-
-   article.landingPage > img {
-      width: 385px;
-      height: 315px;
-   }
-
-   header div.landingPage > img {
-      max-width: 650px;
-   }
-}
-
-@media (max-width: 767px) {
-   header .landingPage {
-      font-size: 2rem;
-      padding: 28px 32px 0;
-   }
-
-   header .landingPage img {
-      width: 100%;
-   }
-
-   nav.landingPage > div.landingPage img {
-      width: 88.6px;
+   nav.landingPage > div.landingPage {
+      display: flex;
+      padding: 20px 200px;
+      align-items: center;
+      justify-content: space-between;
    }
 
    nav.landingPage > div.landingPage > a.button {
-      width: 80px;
-      font-size: 0.875rem;
+      width: 128px;
    }
+
+
+
+   header .landingPage {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--Linkbrary-bg);
+      width: 100%;
+      max-width: 1200px;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0 auto;  
+      padding: 70px 0 0;
+      gap: 40px;
+      font-size: 4rem;
+      text-align: center;
+      font-weight: 700;
+      line-height: 125%;
+   }
+
+   header div.landingPage > img {
+      width: 1118px;
+   }
+
+   header.landingPage > img {
+      width: 100%;   
+   }
+
 
    .landingPage > a.button {
-      width: 200px;
-      font-size: 0.875rem;
+         width: 350px;
    }
 
-   article.landingPage{
+
+
+   .articleWhiteBackground {
+      background-color: var(--LBrary-White); 
+      width: 100%; 
+      padding-bottom: 120px;
+   }
+
+   article.landingPage {
+      background-color: var(--LBrary-White);
+      grid-template-columns: 1fr 1fr;
       display: grid;
-      grid-template-columns: 1fr;
-      padding: 40px;
+      padding: 50px 0;
+      width: 100%;
+      max-width: 981px;
+      margin: 0 auto;
+      align-items: center;
+      column-gap: 157px;
+      row-gap: 10px;
    }
 
-   article p.title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      grid-row: 1;
-   }
-
-   article p.description {
-      font-size: 0.9375rem;
-      margin-top: 16px;
-      grid-row: 3;
+   article.landingPage > p {
+      margin: 0;
    }
 
    article.landingPage > img {
-      width: 100%;
-      height: auto;
-      grid-column: 1;
-      grid-row: 2;
+      grid-row: 1 / 3;
+      width: 550px;
+      height: 450px;
    }
+
+   article p.title {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      grid-row: 1;
+      margin: auto;
+      margin-bottom: 0;
+      margin-left: 0;
+   }
+
+   article p.description {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 24px;
+      margin: auto;
+      margin-top: 0;
+      margin-left: 0;
+   }
+
+
 
    footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 32px;      
-      row-gap: 60px;
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--LBrary-Black);
+      width: 100%;
+      margin: 0;
+      padding: 32px 104px 64px;
    }
 
-   footer .corperateInformation {
-      grid-row: 2;
+   .corperateInformation {
+      color: #676767;
+      text-align: left;
+      font-family: acme;
+      font-size: 1rem;
+      font-weight: 400;
    }
-   
+
+   .footerPravay{
+      display: flex;
+      gap: 30px;
+      color: #CFCFCF;
+      font-family: acme;
+      font-size: 1rem;
+      font-weight: 400;
+   }
+
+   .footerSocial {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: end;
+   }
+
+/* 로그인 페이지 */
+
    .SignPage {
-      width: 100%;
-      max-width: 464px;
-      margin: 120px auto auto;
-      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 238px auto auto;
+      width: 400px;
    }
+
+   .SignForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 30px;
+   }
+
+   .SignForm > header {
+      flex-direction: column;
+      width: auto;
+      text-align: center;
+      color: var(--LBrary-Black);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 150%;
+   }
+
+   .InputSection {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+   .SignInput  {
+      display: flex;
+      padding: 18px 15px;
+      width: 100%;
+      gap: 6px;
+      border-radius: 8px;
+      border: 1px solid var(--LBrary-Gray20);
+      background: var(--LBrary-White);
+      position: relative;
+   }
+
+   .inputDiv {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      width: 100%;
+   }
+
+   .SignInput:focus{ 
+      outline-color: var(--LBrary-Primary-color);
+   }
+
+   .passwordSeenButton {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translate(0, -50%);
+   }
+
+
+   .signInputBeHidden {
+      position: absolute;
+      margin-right: 15px;
+   }
+
+   /*
+
+   .WrongPass {
+      color: var(--LBrary-Red);
+      font-size: 0.875rem;
+      font-weight: 400;
+   } 틀렸을 경우 관련하여 week1에 작업했던 더미 
+   
+   */
+
+   .SignLabel {
+      color: var(--LBrary-black);
+      font-size: 0.875rem;
+      font-weight: 400;
+   }
+
+   .SocialSign {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 8px;
+      border: 1px solid var(--LBrary-Gray20);
+      background-color: var(--LBrary-Gray10);
+      width: 100%;
+      margin: 32px;
+      padding: 12px 24px;
+      font-size: 0.875rem;
+      color: var(--LBrary-Gray50);
+   }
+
+   .socialLoginIcons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+   }
+
+   .socialLoginIcon {
+      display: flex;
+      position: relative;
+      height: 42px;
+      width: 42px;  
+   }
+
+   .SignForm > .button {
+      width: 100%;
+      margin: auto;
+   }
+
+/* 로그인 페이지 끝 */
+
+/* 태블릿 반응형 */
+
+   @media (max-width: 1199px) {
+      nav.landingPage > div.landingPage {
+         width: 100%;
+         padding: 20px 32px;
+         max-width: 864px;
+         margin: 0 auto;
+      }
+      
+      header .landingPage {
+         max-width: 698px;
+      }
+
+      article.landingPage {
+         max-width: 698px;
+         row-gap: 10px;
+         column-gap: 51px;
+      }
+
+      article.landingPage > img {
+         width: 385px;
+         height: 315px;
+      }
+
+      header div.landingPage > img {
+         max-width: 650px;
+      }
+   }
+
+/* 모바일 반응형 */
+
+   @media (max-width: 767px) {
+      header .landingPage {
+         font-size: 2rem;
+         padding: 28px 32px 0;
+      }
+
+      header .landingPage img {
+         width: 100%;
+      }
+
+      nav.landingPage > div.landingPage img {
+         width: 88.6px;
+      }
+
+      nav.landingPage > div.landingPage > a.button {
+         width: 80px;
+         font-size: 0.875rem;
+      }
+
+      .landingPage > a.button {
+         width: 200px;
+         font-size: 0.875rem;
+      }
+
+      article.landingPage{
+         display: grid;
+         grid-template-columns: 1fr;
+         padding: 40px;
+      }
+
+      article p.title {
+         font-size: 1.5rem;
+         margin-bottom: 20px;
+         grid-row: 1;
+      }
+
+      article p.description {
+         font-size: 0.9375rem;
+         margin-top: 16px;
+         grid-row: 3;
+      }
+
+      article.landingPage > img {
+         width: 100%;
+         height: auto;
+         grid-column: 1;
+         grid-row: 2;
+      }
+
+      footer {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         padding: 32px;      
+         row-gap: 60px;
+      }
+
+      footer .corperateInformation {
+         grid-row: 2;
+      }
+      
+      .SignPage {
+         width: 100%;
+         max-width: 464px;
+         margin: 120px auto auto;
+         padding: 0 32px;
+      }
 }
