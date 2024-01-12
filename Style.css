@@ -166,7 +166,7 @@ body {
    }
 
    /*모바일 변환시 이미지의 배열 순서 문제를 
-   태그 수준에서 최적화 하기 위해 grid로 구성*/
+   태그 수준에서 최적화 하기 위해 최대 사이즈에서도 flex가 아닌 grid로 구성*/
 
    article.landingPage > p {
       margin: 0;
